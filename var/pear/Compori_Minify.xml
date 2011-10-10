@@ -1,0 +1,159 @@
+<_>
+   <form_key>0tlldXEXj9GtAFrM</form_key>
+   <name>Compori_Minify</name>
+   <channel>connect.magentocommerce.com/community</channel>
+   <summary>Integrates Minify from the minify project on http://code.google.com/p/minify/</summary>
+   <description>It combines multiple CSS or Javascript files, removes unnecessary whitespace and comments, and serves them with gzip encoding and optimal client-side cache headers. </description>
+   <license>Open Software License (OSL 3.0)</license>
+   <license_uri>http://opensource.org/licenses/osl-3.0.php</license_uri>
+   <release_version>0.0.4</release_version>
+   <api_version>1.4.0.1</api_version>
+   <release_stability>stable</release_stability>
+   <api_stability>stable</api_stability>
+   <notes>0.0.4 Magento Connect release
+0.0.3. Remove layout updates in minify.xml
+0.0.2 Magento Connect release
+0.0.1 initial release
+- Transparent Mode: Javascript and Stylesheet items in head block will be optimized automatically.
+- Logging via Firebug
+- Debugging mode
+- Clear cache function on &quot;Flush Javascript/Css Cache&quot; button
+- Including blocks in head and bottom of page for future use.
+</notes>
+   <maintainers>
+      <role>
+         <role>lead</role>
+         <role>lead</role>
+      </role>
+      <name>
+         <name/>
+         <name>Martin Nemitz</name>
+      </name>
+      <handle>
+         <handle/>
+         <handle>dr.nemi</handle>
+      </handle>
+      <email>
+         <email/>
+         <email>martin.nemitz@compori.com</email>
+      </email>
+      <active>
+         <active>0</active>
+         <active>1</active>
+      </active>
+   </maintainers>
+   <depends_php_min>5.2.0</depends_php_min>
+   <depends_php_max>6.0.0</depends_php_max>
+   <depends_php_recommended/>
+   <depends_php_exclude>6.0.0</depends_php_exclude>
+   <depends>
+      <package>
+         <name>
+            <name/>
+         </name>
+         <channel>
+            <channel/>
+         </channel>
+         <min>
+            <min/>
+         </min>
+         <max>
+            <max/>
+         </max>
+         <recommended>
+            <recommended/>
+         </recommended>
+         <exclude>
+            <exclude/>
+         </exclude>
+         <type>
+            <type>required</type>
+         </type>
+      </package>
+      <subpackage>
+         <name>
+            <name/>
+         </name>
+         <channel>
+            <channel/>
+         </channel>
+         <min>
+            <min/>
+         </min>
+         <max>
+            <max/>
+         </max>
+         <recommended>
+            <recommended/>
+         </recommended>
+         <exclude>
+            <exclude/>
+         </exclude>
+         <type>
+            <type>required</type>
+         </type>
+      </subpackage>
+      <extension>
+         <name>
+            <name>PDO</name>
+         </name>
+         <min>
+            <min/>
+         </min>
+         <max>
+            <max/>
+         </max>
+         <recommended>
+            <recommended/>
+         </recommended>
+         <exclude>
+            <exclude/>
+         </exclude>
+         <type>
+            <type>required</type>
+         </type>
+      </extension>
+   </depends>
+   <contents>
+      <role>
+         <role>magelocal</role>
+         <role>magelocal</role>
+         <role>magedesign</role>
+         <role>magedesign</role>
+         <role>mageetc</role>
+         <role>magelib</role>
+      </role>
+      <path>
+         <path/>
+         <path>Compori\Minify</path>
+         <path>frontend\base\default\layout\minify.xml</path>
+         <path>frontend\base\default\template\minify</path>
+         <path>modules\Compori_Minify.xml</path>
+         <path>minify-2.4.1b</path>
+      </path>
+      <type>
+         <type>file</type>
+         <type>dir</type>
+         <type>file</type>
+         <type>dir</type>
+         <type>file</type>
+         <type>dir</type>
+      </type>
+      <include>
+         <include/>
+         <include/>
+         <include/>
+         <include/>
+         <include/>
+         <include/>
+      </include>
+      <ignore>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+      </ignore>
+   </contents>
+</_>

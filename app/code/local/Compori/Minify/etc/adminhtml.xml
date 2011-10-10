@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/** 
+ * Compori Minify Extension based upon Minify Project from http://code.google.com/p/minify/
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category    Compori
+ * @package     Compori_Minify
+ * @author 		Martin Nemitz <martin.nemitz@compori.com>
+ * @copyright 	Martin Nemitz 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<minify translate="title" module="minify">
+										<title>Minify Section</title>
+									</minify>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>
+                    

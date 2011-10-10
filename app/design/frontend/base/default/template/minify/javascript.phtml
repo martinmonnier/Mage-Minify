@@ -1,0 +1,56 @@
+<?php
+/**
+ * Compori Minify Extension based upon Minify Project from http://code.google.com/p/minify/
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ *
+ * @category    Compori
+ * @package     Compori_Minify
+ * @author 		Martin Nemitz <martin.nemitz@compori.com>
+ * @copyright 	Martin Nemitz 
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/* @var $block Compori_Minify_Block_Javascript */
+$block = $this;
+$html  = array();
+
+$elements = $block->getElements();
+foreach ($elements as $element) {
+		
+	$if = isset($element['if']) ? $element['if'] : false;
+		
+	// print if begin
+	if ($if) {
+    	$html[] = '<!--[if '.$if.']>';
+	}
+		
+	$items = $element['items'];
+	foreach ($items as $item) {
+		
+		// block type?	
+		if($block->isInline()) { 
+			
+			// print inline script content
+			$html[] = '<script language="javascript"'.$item['params'].'>';
+			$html[] = $item['content'];
+			$html[] = "\n".'</script>';
+			
+		}else{			
+			
+			// print external file
+			$html[] = '<script type="text/javascript" src="'.$item['url'].'"'.$item['params'].'></script>';
+		}
+	}
+		
+	// print if end
+	if ($if) {
+    	$html[] = '<![endif]-->';
+	}
+}
+print("\n".implode("\n", $html)."\n");
