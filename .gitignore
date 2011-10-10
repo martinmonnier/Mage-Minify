@@ -1,0 +1,64 @@
+# Zend Studio 
+/.settings/
+/.buildpath
+/.project
+
+# Root files
+/.htaccess
+/.htaccess.sample
+/cron.php
+/cron.sh
+/favicon.ico
+/index.php
+/index.php.sample
+/install.php
+/LICENSE_AFL.txt
+/LICENSE.html
+/LICENSE.txt
+/pear
+/pear.ps1
+/php.ini.sample
+
+
+# unused sub folders
+/app/code/community
+/app/code/core
+/app/design/adminhtml
+/app/design/frontend/base/default/etc
+/app/design/frontend/base/default/layout/*
+!/app/design/frontend/base/default/layout/minify.xml
+/app/design/frontend/base/default/template/*
+!/app/design/frontend/base/default/template/minify
+/app/design/frontend/default
+/app/design/install
+
+/app/etc/modules/*
+!/app/etc/modules/Compori_Minify.xml
+/app/etc/local.*
+/app/etc/config.xml
+/app/locale
+/app/Mage.php
+/app/.htaccess
+
+# Ignore folders
+/downloader
+/errors
+/includes
+/js
+
+# Ignore Libraries except minify lib
+/lib/*
+!/lib/minify-2.4.1b
+
+/media
+/pkginfo
+/shell
+/skin
+/var/.htaccess
+/var/cache
+/var/locks
+/var/log
+/var/pear/*
+!/var/pear/Compori_Minify.xml
+/var/session
+

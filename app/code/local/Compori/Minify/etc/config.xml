@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/** 
+ * Compori Minify Extension based upon Minify Project from http://code.google.com/p/minify/
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category    Compori
+ * @package     Compori_Minify
+ * @author 		Martin Nemitz <martin.nemitz@compori.com>
+ * @copyright 	Martin Nemitz 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+	<modules>
+		<Compori_Minify>
+			<version>0.0.4</version>
+		</Compori_Minify>
+	</modules>
+
+	<!-- Global Section -->
+	<global>
+	    
+	    <!-- Define Helpers -->
+		<helpers>
+			<minify>
+				<class>Compori_Minify_Helper</class>
+			</minify>
+		</helpers>
+		
+		<!-- Define Blocks -->
+        <blocks>
+            <minify>
+            	<class>Compori_Minify_Block</class>
+           </minify>
+           
+ 			<!-- Rewrite: Hhtml Head -->
+			<page>
+				<rewrite>
+					<html_head>Compori_Minify_Block_Page_Html_Head</html_head>
+				</rewrite>
+			</page>           
+        </blocks>	
+         
+		<events>
+			<clean_media_cache_after>
+				<observers>
+      				<minify>
+        				<type>singleton</type>
+        				<class>Compori_Minify_Model_Cache_Observer</class>
+        				<method>onCleanAfter</method>
+      				</minify>
+    			</observers>
+      		</clean_media_cache_after>
+		</events>      		
+	</global>	
+	
+	<!-- Backend Section -->
+	<frontend>
+		
+		<!-- Layout updates  -->
+		<layout>
+			<updates>
+				<minify>
+					<file>minify.xml</file>
+				</minify>
+			</updates>
+		</layout>
+		
+		 
+		<!-- add route -->
+ 		<routers>
+            <minify>
+                <use>standard</use>
+                <args>
+                    <module>Compori_Minify</module>
+                    <frontName>min</frontName>
+                </args>
+            </minify>		
+        </routers>		
+	</frontend>	
+	
+    <default>
+        <minify>
+            <general>
+            	<transparent_mode>0</transparent_mode>
+                <uploader_hours_behind>0</uploader_hours_behind>
+            </general>
+            <cache>
+            	<file_locking>1</file_locking>
+            </cache>
+            <js>
+            	<enable>0</enable>
+            </js>
+            <css>
+            	<enable>0</enable>
+            </css>
+		</minify>
+	</default>
+</config>	
